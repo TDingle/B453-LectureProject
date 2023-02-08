@@ -12,11 +12,11 @@ public class SpawnBillions : MonoBehaviour
 
     void Update()
     {
-        var bilAmt = GameObject.FindGameObjectsWithTag("Billion");
-        if (bilAmt.Length < billionAmount)
-        {
-            Debug.Log(bilAmt.Length);
-        }
+        //var bilAmt = GameObject.FindGameObjectsWithTag("Billion");
+        //if (bilAmt.Length < billionAmount)
+        //{
+            //Debug.Log(bilAmt.Length);
+        //}
         CreateBillon();
     }
     void CreateBillon()

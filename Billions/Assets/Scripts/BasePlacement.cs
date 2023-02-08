@@ -11,7 +11,7 @@ public class BasePlacement : MonoBehaviour
         
         for (int i = 0; i < Billionaires.Count; i++)
         {
-            Vector3 position = new Vector3(Random.Range(-10.0F, 10.0F), 1, Random.Range(-10.0F, 10.0F));
+            Vector2 position = new Vector2(Random.Range(-7.0F, 7.0F), Random.Range(-4.0F, 4.0F));
             Instantiate(Billionaires[i], position, Quaternion.identity);
         }
     }
