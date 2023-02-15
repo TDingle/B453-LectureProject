@@ -3712,6 +3712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1696571814}
   - component: {fileID: 1696571813}
+  - component: {fileID: 1696571815}
   m_Layer: 0
   m_Name: Billionaire Spawner
   m_TagString: Untagged
@@ -3749,3 +3750,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1696571815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696571812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da1e635b97f14cea93d3c3e2c7e57b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Flags:
+  - {fileID: 234274885309145857, guid: 47bed8f57877c48bf8b4c91309981215, type: 3}
+  - {fileID: 1505570764842011960, guid: d98a386ce4e144916a6a1fd6c1e5c654, type: 3}
