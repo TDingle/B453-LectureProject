@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Undefined
   - Billion
+  - BillionG
+  - BillionY
+  - FlagG
+  - FlagY
   layers:
   - Default
   - TransparentFX
