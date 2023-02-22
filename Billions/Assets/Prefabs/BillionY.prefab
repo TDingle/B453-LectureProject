@@ -55,9 +55,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: BillionY
       objectReference: {fileID: 0}
+    - target: {fileID: 1819152412348434294, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
+      propertyPath: m_TagString
+      value: BillionY
+      objectReference: {fileID: 0}
     - target: {fileID: 5393480884210133267, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -477620053, guid: 213084f59109949ca85a98f858427dc2, type: 3}
+    - target: {fileID: 6653321859636347796, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653321859636347796, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
+      propertyPath: m_AngularDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653321859636347796, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}

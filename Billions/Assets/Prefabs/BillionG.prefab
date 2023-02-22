@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5393480884210133267}
   - component: {fileID: 5340771431558795578}
   - component: {fileID: 6653321859636347796}
+  - component: {fileID: -1094886590096409392}
   m_Layer: 0
   m_Name: BillionG
-  m_TagString: Billion
+  m_TagString: BillionG
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,11 +116,25 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 5
+  m_AngularDrag: 5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &-1094886590096409392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819152412348434294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1057fb227f79e449a9501ff6777b1bcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GFlags: []
+  YFlags: []
