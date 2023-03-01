@@ -10,8 +10,8 @@ public class FlagPlacement : MonoBehaviour
 {
     [SerializeField] List<GameObject> Flags = new List<GameObject>();
     
-    float flagCountG = 0;
-    float flagCountY = 0;
+    public float flagCountG = 0;
+    public float flagCountY = 0;
     float flagMax = 2;
     GameObject closest = null;
     float mouseCheck;

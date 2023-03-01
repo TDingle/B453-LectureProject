@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &106713192016803963
+--- !u!1001 &6318077864268825696
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -54,50 +54,39 @@ PrefabInstance:
     - target: {fileID: 1521040562687990743, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
       propertyPath: billionHealth.Array.data[0]
       value: 
-      objectReference: {fileID: 155593199, guid: f64790eb17c661647a0fb010bf95797d, type: 3}
+      objectReference: {fileID: 2072088279, guid: 816d474dc75200545804d7ff97bf17ea, type: 3}
     - target: {fileID: 1521040562687990743, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
       propertyPath: billionHealth.Array.data[1]
       value: 
-      objectReference: {fileID: 1517714674, guid: f64790eb17c661647a0fb010bf95797d, type: 3}
+      objectReference: {fileID: 873001674, guid: 816d474dc75200545804d7ff97bf17ea, type: 3}
     - target: {fileID: 1521040562687990743, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
       propertyPath: billionHealth.Array.data[2]
       value: 
-      objectReference: {fileID: 463045177, guid: f64790eb17c661647a0fb010bf95797d, type: 3}
+      objectReference: {fileID: -1435924314, guid: 816d474dc75200545804d7ff97bf17ea, type: 3}
     - target: {fileID: 1521040562687990743, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
       propertyPath: billionHealthStages.Array.data[0]
       value: 
-      objectReference: {fileID: 155593199, guid: f64790eb17c661647a0fb010bf95797d, type: 3}
+      objectReference: {fileID: 2072088279, guid: 816d474dc75200545804d7ff97bf17ea, type: 3}
     - target: {fileID: 1521040562687990743, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
       propertyPath: billionHealthStages.Array.data[1]
       value: 
-      objectReference: {fileID: 1517714674, guid: f64790eb17c661647a0fb010bf95797d, type: 3}
+      objectReference: {fileID: 873001674, guid: 816d474dc75200545804d7ff97bf17ea, type: 3}
     - target: {fileID: 1521040562687990743, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
       propertyPath: billionHealthStages.Array.data[2]
       value: 
-      objectReference: {fileID: 463045177, guid: f64790eb17c661647a0fb010bf95797d, type: 3}
+      objectReference: {fileID: -1435924314, guid: 816d474dc75200545804d7ff97bf17ea, type: 3}
     - target: {fileID: 1819152412348434294, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
       propertyPath: m_Name
-      value: BillionY
+      value: BillionO
       objectReference: {fileID: 0}
     - target: {fileID: 1819152412348434294, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
       propertyPath: m_TagString
-      value: BillionY
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5393480884210133267, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -477620053, guid: 213084f59109949ca85a98f858427dc2, type: 3}
-    - target: {fileID: 6653321859636347796, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6653321859636347796, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
-      propertyPath: m_AngularDrag
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6653321859636347796, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+      objectReference: {fileID: 517325980, guid: 42e1c34b80f53074d839f036ebebe908, type: 3}
+    m_RemovedComponents:
+    - {fileID: -1094886590096409392, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}

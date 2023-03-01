@@ -10,6 +10,7 @@ TagManager:
   - BillionY
   - FlagG
   - FlagY
+  - Bullet
   layers:
   - Default
   - TransparentFX

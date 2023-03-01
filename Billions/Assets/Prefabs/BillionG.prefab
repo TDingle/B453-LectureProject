@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5340771431558795578}
   - component: {fileID: 6653321859636347796}
   - component: {fileID: -1094886590096409392}
+  - component: {fileID: 1521040562687990743}
   m_Layer: 0
   m_Name: BillionG
   m_TagString: BillionG
@@ -116,14 +117,14 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 5
-  m_AngularDrag: 5
+  m_LinearDrag: 8
+  m_AngularDrag: 8
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!114 &-1094886590096409392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,3 +139,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GFlags: []
   YFlags: []
+--- !u!114 &1521040562687990743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819152412348434294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41afe9342e8e1b946931af9294af4284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  billionHealthStages:
+  - {fileID: 94379794, guid: 246c5e9710173dd4bb5c23cdbae27a70, type: 3}
+  - {fileID: -899957153, guid: 246c5e9710173dd4bb5c23cdbae27a70, type: 3}
+  - {fileID: -1825929243, guid: 246c5e9710173dd4bb5c23cdbae27a70, type: 3}

@@ -13,7 +13,7 @@ public class FollowFlag : MonoBehaviour
     public GameObject[] GFlags;
     public GameObject[] YFlags;
 
-   
+    FlagPlacement FlagPlacement;
     private void Start()
     { 
         spawner = GameObject.Find("Billionaire Spawner");
@@ -21,8 +21,10 @@ public class FollowFlag : MonoBehaviour
     }
     void Update()
     {
-
-        CalculateClosestFlag();
+        //if (FlagPlacement.flagCountG.Equals(2) && FlagPlacement.flagCountY.Equals(2))
+        //{
+            CalculateClosestFlag();
+        //}
     }
     
     public void CalculateClosestFlag()
@@ -46,12 +48,12 @@ public class FollowFlag : MonoBehaviour
         foreach (GameObject flag in Flags)
         {
             flagDist = Vector2.Distance(transform.position, flag.transform.position);
-            Debug.Log("hi");
+            
             if (flagDist < lowestPos || lowestPos == -1)
             {
                 lowestPos = flagDist;
                 closest = flag;
-                Debug.Log("hello");
+                
 
             }
         }
