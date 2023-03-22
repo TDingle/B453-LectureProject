@@ -11,6 +11,9 @@ TagManager:
   - FlagG
   - FlagY
   - Bullet
+  - BillionO
+  - BillionB
+  - border
   layers:
   - Default
   - TransparentFX

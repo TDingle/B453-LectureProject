@@ -52,6 +52,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1521040562687990743, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
+      propertyPath: color
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521040562687990743, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
       propertyPath: billionHealth.Array.data[0]
       value: 
       objectReference: {fileID: 155593199, guid: f64790eb17c661647a0fb010bf95797d, type: 3}
@@ -83,6 +87,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: BillionY
       objectReference: {fileID: 0}
+    - target: {fileID: 3348847641976756381, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 9102287961445409092, guid: 6f387ea2b797b8842bf2e345894e4943, type: 3}
+    - target: {fileID: 3348847641976756381, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
+      propertyPath: bulletSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5393480884210133267, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -99,5 +111,13 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8130761176760710376, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 9102287961445409092, guid: 6f387ea2b797b8842bf2e345894e4943, type: 3}
+    - target: {fileID: 8130761176760710376, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 9102287961445409092, guid: 6f387ea2b797b8842bf2e345894e4943, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffbe0939f40614dd4ae9e3628d2ee03f, type: 3}

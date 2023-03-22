@@ -104,7 +104,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.21
 --- !u!50 &6653321859636347796
 Rigidbody2D:
   serializedVersion: 4
@@ -230,7 +230,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1362cfc14259374dac63bb228e1140c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turret: {fileID: 0}
+  closest: {fileID: 0}
+  EnemyBillions: []
+  spawnTimer: 1.5
+  bulletSpeed: 5
+  bullet: {fileID: 2551508507799955079, guid: 7d15f783dc9e6664b8b799247d0dd32a, type: 3}
 --- !u!4 &6667993905428039614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8093105749435245581, guid: 660e191ecad8a9d4faff2f84442b6567, type: 3}
