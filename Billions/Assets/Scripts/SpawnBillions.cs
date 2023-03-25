@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnBillions : MonoBehaviour
 {
     [SerializeField] float spawnTimer = 2f;
-    [SerializeField] float billionAmount = 7f;
+    float billionAmount = 30f;
     [SerializeField] GameObject billion;
     float billions = 0f;
     

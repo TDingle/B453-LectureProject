@@ -85,7 +85,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1749070585592332045, guid: e50d7988e1d2c44b8b4a104650f76716, type: 3}
       propertyPath: m_TagString
-      value: BillionB
+      value: Billion
       objectReference: {fileID: 0}
     - target: {fileID: 3387375675549655270, guid: e50d7988e1d2c44b8b4a104650f76716, type: 3}
       propertyPath: bullet

@@ -7,13 +7,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4012044928595737060, guid: b1acb03c0fdd04b08ba01efabd8573cf, type: 3}
+      propertyPath: color
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2777544501411016307, guid: b1acb03c0fdd04b08ba01efabd8573cf, type: 3}
       propertyPath: billion
       value: 
       objectReference: {fileID: 1749070585592332045, guid: e50d7988e1d2c44b8b4a104650f76716, type: 3}
+    - target: {fileID: 3198640338510613859, guid: b1acb03c0fdd04b08ba01efabd8573cf, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 7741111419516474251, guid: 9be158073d582974f9609081614b5548, type: 3}
     - target: {fileID: 4968925735402152116, guid: b1acb03c0fdd04b08ba01efabd8573cf, type: 3}
       propertyPath: m_Name
       value: BillionaireY
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968925735402152116, guid: b1acb03c0fdd04b08ba01efabd8573cf, type: 3}
+      propertyPath: m_TagString
+      value: BillionY
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968925735402152117, guid: b1acb03c0fdd04b08ba01efabd8573cf, type: 3}
+      propertyPath: m_Mass
+      value: 1000000
       objectReference: {fileID: 0}
     - target: {fileID: 4968925735402152120, guid: b1acb03c0fdd04b08ba01efabd8573cf, type: 3}
       propertyPath: m_RootOrder

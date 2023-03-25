@@ -4,34 +4,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
+using System.Xml.Serialization;
 
 public class TurretTarget : MonoBehaviour
 {
     public GameObject closest = null;
 
-    GameObject[] currentBils;
-    public GameObject[] EnemyBillions;
-
-    GameObject[] GBils;
-    GameObject[] YBils;
-    GameObject[] BBils;
-    GameObject[] OBils;
-
-    GameObject[] YGBils;
-    GameObject[] BOBils;
-
+    GameObject[] Bils;
+    List<GameObject> enemyBils;
+  
     string parentTag;
-
-
+    int color;
+    float enemyDist;
+    float bulletSpeed = 500f;
+    float baseTurretDelay = .5f;
 
     [SerializeField] float spawnTimer = 1.5f;
-    
-    float bulletSpeed = 500f;
-   
     [SerializeField] GameObject bullet;
-    Rigidbody2D rigidb;
-    float enemyDist;
 
+    Rigidbody2D rigidb;
+   
+    private void Start()
+    {
+        parentTag = transform.parent.tag;
+        if(parentTag == "Billion")
+        {
+            color = GetComponentInParent<BillionHealth>().color;
+        }
+        else
+        {
+            color = GetComponentInParent<Bases>().color;
+        }
+    }
     void Update()
     {
         if (transform.parent != null)
@@ -52,23 +56,25 @@ public class TurretTarget : MonoBehaviour
         float billionDist;
 
 
-       
+        enemyBils = new List<GameObject>();
         parentTag = transform.parent.tag;
-        YBils = GameObject.FindGameObjectsWithTag("BillionY");
-        GBils = GameObject.FindGameObjectsWithTag("BillionG");
-        BBils = GameObject.FindGameObjectsWithTag("BillionB");
-        OBils = GameObject.FindGameObjectsWithTag("BillionO");
-
-        YGBils = YBils.Concat(GBils).ToArray();
-        BOBils = BBils.Concat(OBils).ToArray();
-
-        currentBils = YGBils.Concat(BOBils).ToArray();
-        EnemyBillions = currentBils.Where(e => !e.CompareTag(parentTag)).ToArray();
+        Bils = GameObject.FindGameObjectsWithTag("Billion");
+        foreach (GameObject bil in Bils)
+        {
+         
+            if (bil.GetComponent<BillionHealth>().color != color)
+            {
+                enemyBils.Add(bil);
+               
+            }
+        }
+        
+        
 
 
        
 
-        foreach (GameObject billion in EnemyBillions)
+        foreach (GameObject billion in enemyBils)
         {
             billionDist = Vector2.Distance(transform.position, billion.transform.position);
             
@@ -80,11 +86,24 @@ public class TurretTarget : MonoBehaviour
                 
             }
         }
-       
-        
-        Vector3 dir = closest.transform.position - transform.position;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        if (parentTag == "Billion")
+        {
+            Vector3 dir = closest.transform.position - transform.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
+        else
+        {
+            Vector3 dir = closest.transform.position - transform.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            //baseTurretDelay -= Time.deltaTime;
+            //if (baseTurretDelay <= 0)
+            //{
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(angle, Vector3.forward), baseTurretDelay * Time.deltaTime);
+                //baseTurretDelay = .5f;
+            //}
+        }
 
     }
     void shoot()

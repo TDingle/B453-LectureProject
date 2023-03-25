@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class FollowFlag : MonoBehaviour
 {
+
+    
     GameObject closest = null;
   
     GameObject spawner;
     Rigidbody2D rigidb;
-    float step;
+ 
     float speed;
+    int color;
     public GameObject[] GFlags;
     public GameObject[] YFlags;
 
-    FlagPlacement FlagPlacement;
     private void Start()
     { 
         spawner = GameObject.Find("Billionaire Spawner");
         rigidb = this.GetComponent<Rigidbody2D>();
+        color = GetComponent<BillionHealth>().color;
     }
     void Update()
     {
@@ -35,12 +38,12 @@ public class FollowFlag : MonoBehaviour
 
         float lowestPos = -1;
         float flagDist;
-
-        if (this.tag == "BillionG")
+        
+        if (color == 0)
         {
             Flags = GFlags;
         }
-        else if(this.tag == "BillionY")
+        else if(color == 1)
         {
             Flags = YFlags;
         }

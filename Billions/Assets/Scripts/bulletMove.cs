@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bulletMove : MonoBehaviour
 {
-    float spawnTimer = 1.25f;
+    [SerializeField]float spawnTimer = 1.25f;
     [SerializeField] public int color;
    
     void Update()

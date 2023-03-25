@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1521040562687990743}
   m_Layer: 0
   m_Name: BillionG
-  m_TagString: BillionG
+  m_TagString: Billion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,6 +156,7 @@ MonoBehaviour:
   - {fileID: 94379794, guid: 246c5e9710173dd4bb5c23cdbae27a70, type: 3}
   - {fileID: -899957153, guid: 246c5e9710173dd4bb5c23cdbae27a70, type: 3}
   - {fileID: -1825929243, guid: 246c5e9710173dd4bb5c23cdbae27a70, type: 3}
+  color: 0
 --- !u!1001 &3231620719544656819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -233,7 +234,6 @@ MonoBehaviour:
   closest: {fileID: 0}
   EnemyBillions: []
   spawnTimer: 1.5
-  bulletSpeed: 5
   bullet: {fileID: 2551508507799955079, guid: 7d15f783dc9e6664b8b799247d0dd32a, type: 3}
 --- !u!4 &6667993905428039614 stripped
 Transform:

@@ -9,7 +9,7 @@ public class BillionHealth : MonoBehaviour
     [SerializeField] Sprite[] billionHealthStages;
     private int health = 3;
     private int iter = 0;
-    [SerializeField] int color;
+    [SerializeField] public int color;
     
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -18,7 +18,13 @@ public class BillionHealth : MonoBehaviour
         
         if (collision.gameObject.GetComponent<bulletMove>().color != color)
         {
-            Destroy(collision.gameObject);
+            if(collision.gameObject.tag == "BaseBullet")
+            {
+                Destroy(collision.gameObject);
+                health = 0;
+            }
+            
+           
             if (health > 0)
             {
                 
