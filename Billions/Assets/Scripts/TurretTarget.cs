@@ -11,6 +11,7 @@ public class TurretTarget : MonoBehaviour
     public GameObject closest = null;
 
     GameObject[] Bils;
+    GameObject[] Bases;
     List<GameObject> enemyBils;
   
     string parentTag;
@@ -38,6 +39,7 @@ public class TurretTarget : MonoBehaviour
     }
     void Update()
     {
+        
         if (transform.parent != null)
         {
 
@@ -59,6 +61,7 @@ public class TurretTarget : MonoBehaviour
         enemyBils = new List<GameObject>();
         parentTag = transform.parent.tag;
         Bils = GameObject.FindGameObjectsWithTag("Billion");
+        Bases = GameObject.FindGameObjectsWithTag("Bases");
         foreach (GameObject bil in Bils)
         {
          
@@ -68,11 +71,18 @@ public class TurretTarget : MonoBehaviour
                
             }
         }
-        
-        
+        if (parentTag != "Bases")
+        {
+            foreach (GameObject bas in Bases)
+            {
 
+                if (bas.GetComponent<Bases>().color != color)
+                {
+                    enemyBils.Add(bas);
 
-       
+                }
+            }
+        }
 
         foreach (GameObject billion in enemyBils)
         {
@@ -86,23 +96,25 @@ public class TurretTarget : MonoBehaviour
                 
             }
         }
-
-        if (parentTag == "Billion")
+        if (closest != null)
         {
-            Vector3 dir = closest.transform.position - transform.position;
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        }
-        else
-        {
-            Vector3 dir = closest.transform.position - transform.position;
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            //baseTurretDelay -= Time.deltaTime;
-            //if (baseTurretDelay <= 0)
-            //{
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(angle, Vector3.forward), baseTurretDelay * Time.deltaTime);
+            if (parentTag == "Billion")
+            {
+                Vector3 dir = closest.transform.position - transform.position;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            }
+            else
+            {
+                Vector3 dir = closest.transform.position - transform.position;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                //baseTurretDelay -= Time.deltaTime;
+                //if (baseTurretDelay <= 0)
+                //{
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(angle, Vector3.forward), baseTurretDelay * Time.deltaTime);
                 //baseTurretDelay = .5f;
-            //}
+                //}
+            }
         }
 
     }
@@ -118,6 +130,7 @@ public class TurretTarget : MonoBehaviour
         if (spawnTimer <= 0)
         {
             GameObject newBullet = Instantiate(bullet, spawnPos, turretRot);
+            newBullet.transform.parent = transform;
             rigidb = newBullet.GetComponent<Rigidbody2D>();
             rigidb.AddForce((closest.transform.position - transform.position).normalized * bulletSpeed);
             spawnTimer = 1.5f;

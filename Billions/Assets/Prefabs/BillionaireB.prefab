@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4968925735402152116, guid: b1acb03c0fdd04b08ba01efabd8573cf, type: 3}
       propertyPath: m_TagString
-      value: BillionB
+      value: Bases
       objectReference: {fileID: 0}
     - target: {fileID: 4968925735402152120, guid: b1acb03c0fdd04b08ba01efabd8573cf, type: 3}
       propertyPath: m_RootOrder

@@ -26,7 +26,8 @@ public class SpawnBillions : MonoBehaviour
         spawnTimer -= Time.deltaTime;
         if (spawnTimer <= 0 && billions < billionAmount)
         {
-            Instantiate(billion, transform.position + randPosition, Quaternion.identity); ;
+            Instantiate(billion, transform.position + randPosition, Quaternion.identity);
+            
             spawnTimer = 2f;
             billions += 1;
         }
