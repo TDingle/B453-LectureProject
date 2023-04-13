@@ -8,6 +8,12 @@ public class xpManager : MonoBehaviour
     public int yellowXP = 0;
     public int blueXP = 0;
     public int orangeXP = 0;
+
+    public int greenRank;
+    public int yellowRank;
+    public int blueRank;
+    public int orangeRank;
+
     GameObject[] Bases;
     void Start()
     {

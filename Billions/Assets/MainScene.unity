@@ -3791,6 +3791,10 @@ MonoBehaviour:
   yellowXP: 0
   blueXP: 0
   orangeXP: 0
+  greenRank: 0
+  yellowRank: 0
+  blueRank: 0
+  orangeRank: 0
 --- !u!1001 &8739291609241116488
 PrefabInstance:
   m_ObjectHideFlags: 0
