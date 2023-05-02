@@ -14,6 +14,10 @@ public class xpManager : MonoBehaviour
     public int blueRank;
     public int orangeRank;
 
+    public int greenTril = 0;
+    public int yellowTril = 0;
+    public int blueTril = 0;
+    public int orangeTril = 0;
     GameObject[] Bases;
     void Start()
     {
@@ -26,5 +30,9 @@ public class xpManager : MonoBehaviour
     void Update()
     {
         
+    }
+    public int GetTotalRank()
+    {
+        return greenRank + yellowRank + blueRank + orangeRank;
     }
 }

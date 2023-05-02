@@ -3795,6 +3795,19 @@ MonoBehaviour:
   yellowRank: 0
   blueRank: 0
   orangeRank: 0
+--- !u!114 &1690154758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690154750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb59bbc49cf8b444a302dcded9f426d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crate: {fileID: 2679533579385809532, guid: 64e084177686eee47ad493bee0f32979, type: 3}
 --- !u!1001 &8739291609241116488
 PrefabInstance:
   m_ObjectHideFlags: 0

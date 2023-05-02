@@ -16,6 +16,7 @@ TagManager:
   - border
   - BaseBullet
   - Bases
+  - Crate
   layers:
   - Default
   - TransparentFX

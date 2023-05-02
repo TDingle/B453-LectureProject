@@ -17,9 +17,14 @@ public class BillionHealth : MonoBehaviour
     public int xp = 0;
     GameObject spawner;
 
+    float powerUpTimer = 2f;
+
+
+
     double currentHealth = 0;
     private void Start()
     {
+        
         spawner = GameObject.Find("Billionaire Spawner");
         if (color == 0)//green
         {
@@ -54,75 +59,169 @@ public class BillionHealth : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        int bColor = collision.gameObject.GetComponent<bulletMove>().color;
-        int bRank = collision.gameObject.GetComponent<bulletMove>().rank;
+
+
         Destroy(collision.gameObject);
 
-        if (bColor != color)
+        if (collision.gameObject.tag == "Crate")
         {
-            if(collision.gameObject.tag == "BaseBullet")
+
+            int crateType = collision.gameObject.GetComponent<Crate>().type;
+            if (color == 0)//green
             {
-                if (bColor == 0)//green
+                if (crateType == 1)
                 {
-                    spawner.gameObject.GetComponent<xpManager>().greenXP += 1;
-                }
-
-                else if (bColor == 1)//yellow
-                {
-                    spawner.gameObject.GetComponent<xpManager>().yellowXP += 1;
-
-                }
-                else if (bColor == 2)//orange
-                {
-                    spawner.gameObject.GetComponent<xpManager>().orangeXP += 1;
+                    spawner.gameObject.GetComponent<xpManager>().greenTril += 5;
+                    powerUpTimer -= Time.deltaTime;
+                    if (powerUpTimer > 0)
+                    //{
+                        transform.GetChild(4).gameObject.SetActive(true);
+                    //}
+                    //transform.GetChild(4).gameObject.SetActive(false);
 
                 }
-                else if (bColor == 3)//blue
+                else if (crateType == 2)
                 {
-                    spawner.gameObject.GetComponent<xpManager>().blueXP += 1;
-
+                    spawner.gameObject.GetComponent<xpManager>().greenXP += 8;
+                    //powerUpTimer -= Time.deltaTime;
+                    //if (powerUpTimer > 0)
+                    //{
+                        transform.GetChild(2).gameObject.SetActive(true);
+                    //}
+                    //transform.GetChild(2).gameObject.SetActive(false);
                 }
-                Destroy(gameObject);
-                health = 0;
+                else if (crateType == 3)
+                {
+                    spawner.gameObject.GetComponent<xpManager>().greenXP += 5;
+                    powerUpTimer -= Time.deltaTime;
+                    //if (powerUpTimer > 0)
+                    //{
+                        transform.GetChild(3).gameObject.SetActive(true);
+                    //}
+                    //transform.GetChild(3).gameObject.SetActive(false);
+                }
             }
-            
-           
-            if (currentHealth > 0)
+
+            else if (color == 1)//yellow
             {
-                
-                currentHealth = currentHealth - ((health * .25) + bRank);
-                if (iter < billionHealthStages.Length)
+                if(crateType == 1)
                 {
-                    this.gameObject.GetComponent<SpriteRenderer>().sprite = billionHealthStages[iter];
-                    iter++;
+                    spawner.gameObject.GetComponent<xpManager>().yellowTril += 5;
+
+                }
+                else if (crateType == 2)
+                {
+                    spawner.gameObject.GetComponent<xpManager>().yellowXP += 8;
+                }
+                else if (crateType == 3)
+                {
+                    spawner.gameObject.GetComponent<xpManager>().yellowXP += 5;
+                }
+
+            }
+            else if (color == 2)//orange
+            {
+                if(crateType == 1)
+                {
+                    spawner.gameObject.GetComponent<xpManager>().orangeTril += 5;
+
+                }
+                else if (crateType == 2)
+                {
+                    spawner.gameObject.GetComponent<xpManager>().orangeXP += 8;
+                }
+                else if (crateType == 3)
+                {
+                    spawner.gameObject.GetComponent<xpManager>().orangeXP += 5;
+                }
+
+            }
+            else if (color == 3)//blue
+            {
+                if(crateType == 1)
+                {
+                    spawner.gameObject.GetComponent<xpManager>().blueTril += 5;
+
+                }
+                else if (crateType == 2)
+                {
+                    spawner.gameObject.GetComponent<xpManager>().blueXP += 8;
+                }
+                else if (crateType == 3)
+                {
+                    spawner.gameObject.GetComponent<xpManager>().blueXP += 5;
                 }
             }
-            else if (currentHealth <= 0)
+        }
+        if (collision.gameObject.tag == "BaseBullet" || collision.gameObject.tag == "Bullet")
+        {
+            int bColor = collision.gameObject.GetComponent<bulletMove>().color;
+            int bRank = collision.gameObject.GetComponent<bulletMove>().rank;
+
+            if (bColor != color)
             {
-                if (bColor == 0)//green
+                if (collision.gameObject.tag == "BaseBullet")
                 {
-                    spawner.gameObject.GetComponent<xpManager>().greenXP += 1;
-                    Debug.Log("green xp ++");
+                    if (bColor == 0)//green
+                    {
+                        spawner.gameObject.GetComponent<xpManager>().greenXP += 1;
+                    }
+
+                    else if (bColor == 1)//yellow
+                    {
+                        spawner.gameObject.GetComponent<xpManager>().yellowXP += 1;
+
+                    }
+                    else if (bColor == 2)//orange
+                    {
+                        spawner.gameObject.GetComponent<xpManager>().orangeXP += 1;
+
+                    }
+                    else if (bColor == 3)//blue
+                    {
+                        spawner.gameObject.GetComponent<xpManager>().blueXP += 1;
+
+                    }
+                    Destroy(gameObject);
+                    health = 0;
                 }
-                else if (bColor == 1)//yellow
+
+
+                if (currentHealth > 0)
                 {
-                    spawner.gameObject.GetComponent<xpManager>().yellowXP += 1;
-                    Debug.Log("yellow xp ++");
+
+                    currentHealth = currentHealth - ((health * .25) + bRank);
+                    if (iter < billionHealthStages.Length)
+                    {
+                        this.gameObject.GetComponent<SpriteRenderer>().sprite = billionHealthStages[iter];
+                        iter++;
+                    }
                 }
-                else if (bColor == 2)//orange
+                else if (currentHealth <= 0)
                 {
-                    spawner.gameObject.GetComponent<xpManager>().orangeXP += 1;
-                    Debug.Log("orange xp ++");
+                    if (bColor == 0)//green
+                    {
+                        spawner.gameObject.GetComponent<xpManager>().greenXP += 1;
+                        
+                    }
+                    else if (bColor == 1)//yellow
+                    {
+                        spawner.gameObject.GetComponent<xpManager>().yellowXP += 1;
+                        
+                    }
+                    else if (bColor == 2)//orange
+                    {
+                        spawner.gameObject.GetComponent<xpManager>().orangeXP += 1;
+                        
+                    }
+                    else if (bColor == 3)//blue
+                    {
+                        spawner.gameObject.GetComponent<xpManager>().blueXP += 1;
+                        
+                    }
+                    Destroy(gameObject);
                 }
-                else if (bColor == 3)//blue
-                {
-                    spawner.gameObject.GetComponent<xpManager>().blueXP += 1;
-                    Debug.Log("blue xp ++");
-                }
-                Destroy(gameObject);
             }
         }
     }
-    
 }
